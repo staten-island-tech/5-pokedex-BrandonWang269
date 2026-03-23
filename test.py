@@ -26,7 +26,5 @@ pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
 choice = input("What type do you want: ")
 for index, item in enumerate(data):
-    if choice == "Bug":
-        print(f"{index}: {item["type"]["Bug"]}")
-    else:
-        print("nothing")
+    if choice == "bug" and 
+        print(f"{index}: {item["name"]["english"]}")
