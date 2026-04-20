@@ -32,23 +32,25 @@ for index, item in enumerate(data):
 """ import json
 pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
-pokemons = []
-choice = input("What pokemon do you want: ").lower()
-for item in data:
-    if choice in item["name"]["english"].lower():
-        pokemons.append(item["name"]["english"])
-for x in pokemons:
-        print(x)
+choice = input("What pokemon do you want: ")
+for index, item in enumerate(data):
+    if choice in (f"{index}: {item["name"]["english"]}"):
+        print(f"{index}: {item["name"]["english"]}")
 else:
     print("No pokemon found") """
 
 import json
 pokedex = open("./pokedex.json", encoding="utf8")
+moves = open("./moves.json", encoding="utf8")
 data = json.load(pokedex)
+data_2 = json.load(moves)
 choice = input("What pokemon do you want: ")
 for index, item in enumerate(data):
     if choice in (f"{index}: {item["name"]["english"]}"):
         print(f"{index}: {item["name"]["english"]}")
         print(f"{index}: {item["type"]}")
+for index, item in enumerate(data_2):
+    if (f"{index}: {item["type"]}") == item["type"]:
         print(f"{index}: {item["ename"]}")
+
 
