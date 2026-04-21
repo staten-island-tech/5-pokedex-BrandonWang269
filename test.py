@@ -50,7 +50,5 @@ for index, item in enumerate(data):
         print(f"{index}: {item["name"]["english"]}")
         print(f"{index}: {item["type"]}")
 for index, item in enumerate(data_2):
-    if (f"{index}: {item["type"]}") == item["type"]:
+    if choice in item["type"]:
         print(f"{index}: {item["ename"]}")
-
-
