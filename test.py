@@ -50,5 +50,7 @@ for index, item in enumerate(data):
         print(f"{index}: {item["name"]["english"]}")
         print(f"{index}: {item["type"]}")
 for index, item in enumerate(data_2):
-    if choice in item["type"]:
-        print(f"{index}: {item["ename"]}")
+    poke_types = item['type']
+for move in data_2:
+    if move['type'] in poke_types:
+        print(f"{move['ename']} ({move['type']})")
